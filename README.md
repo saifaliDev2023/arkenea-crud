@@ -23,4 +23,24 @@ UPDATE: /api/crud/update/:id,
 DELETE: /api/crud/delete/:id,
 
 run app steps:
-1. clone this repo, `git clone `
+1. clone this repo, `git clone https://github.com/saifaliDev2023/arkenea-crud.git`
+2. go to app folder, open tereminal and type `npm install`
+3. `ng serve`
+4. back to main folder
+5. goto sever folder, also open tereminal and type `npm install`
+6. then check you website on localhost 4200
+
+
+## using libraries & frameworks:
+
+1. Node.js
+2. Angular
+3. Express.js
+4. MongoDB
+5. Mongoose
+6. Joi - validator
+7. Multer - image uploder
+8. Cors
+9. dotenv - secure keys
+10. nodemon
+11. material components
