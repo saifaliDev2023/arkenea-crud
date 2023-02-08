@@ -17,10 +17,10 @@ create all api, like
 CREATE, READ, UPDATE, DELETE,
 
 endPoints:
-CREATE: /api/crud/create,
-READ: /api/crud/getAll,
-UPDATE: /api/crud/update/:id,
-DELETE: /api/crud/delete/:id,
+1. CREATE: /api/crud/create,
+2. READ: /api/crud/getAll,
+3. UPDATE: /api/crud/update/:id,
+4. DELETE: /api/crud/delete/:id,
 
 run app steps:
 1. clone this repo, `git clone https://github.com/saifaliDev2023/arkenea-crud.git`
