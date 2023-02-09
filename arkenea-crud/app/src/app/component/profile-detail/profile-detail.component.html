@@ -1,0 +1,11 @@
+<h2 mat-dialog-title>Record Details</h2>
+<mat-dialog-content class="mat-typography">
+  <img src="{{data.profile_image}}" alt="" height="300px" width="500px">
+  <h3><b>Name:</b> {{data.first_name}} {{data.last_name}}</h3>
+  <h3><b>Email:</b> {{data.email}}</h3>
+  <h3><b>Contact number:</b> {{data.phone_number}}</h3>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <!-- <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Install</button> -->
+</mat-dialog-actions>

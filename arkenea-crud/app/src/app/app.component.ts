@@ -6,6 +6,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { CoreService } from './core/core.service';
+import { ProfileDetailComponent } from './component/profile-detail/profile-detail.component';
 
 @Component({
   selector: 'app-root',
@@ -30,8 +31,9 @@ export class AppComponent implements OnInit {
   constructor(
     private _dialog: MatDialog,
     private _empService: EmployeeService,
-    private _coreService: CoreService
-  ) {}
+    private _coreService: CoreService,
+    public dialog: MatDialog
+  ) { }
 
   ngOnInit(): void {
     this.getEmployeeList();
@@ -91,5 +93,31 @@ export class AppComponent implements OnInit {
         }
       },
     });
+  }
+
+  openProfile(id: number) {
+
+    this._empService.getOne(id).subscribe({
+      next: (res) => {
+        res = res.data;
+        console.log(res);
+
+        const dialogRef = this.dialog.open(ProfileDetailComponent, {
+          data: {
+            first_name: res.record.first_name,
+            last_name: res.record.last_name,
+            email: res.record.email,
+            phone_number: res.record.phone_number,
+            profile_image: res.imageUrl,
+          }
+        });
+
+        dialogRef.afterClosed().subscribe(result => {
+          console.log(`Dialog result: ${result}`);
+        });
+      },
+      error: console.log,
+    });
+
   }
 }

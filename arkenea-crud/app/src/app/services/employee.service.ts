@@ -20,6 +20,10 @@ export class EmployeeService {
     return this._http.get('http://localhost:2907/api/crud/getAll');
   }
 
+  getOne(id: number): Observable<any> {
+    return this._http.get(`http://localhost:2907/api/crud/getOne/${id}`);
+  }
+
   deleteEmployee(id: number): Observable<any> {
     return this._http.delete(`http://localhost:2907/api/crud/delete/${id}`);
   }

@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const cors = require('cors')
+const path = require('path');
 
 // define env
 const { PORT,DB_URL } = require('./src/config');
@@ -23,7 +24,9 @@ app.use(cors());
 
 // Parser Setup
 app.use(express.json());
-app.use(express.urlencoded({extended: true}));
+app.use(express.urlencoded({extended: false}));
+
+app.use('/upload', express.static('src/upload'));
 
 // call main route file
 app.use('/api', route);

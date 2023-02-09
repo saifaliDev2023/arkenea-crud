@@ -21,9 +21,11 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { ProfileDetailComponent } from './component/profile-detail/profile-detail.component';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 @NgModule({
-  declarations: [AppComponent, EmpAddEditComponent],
+  declarations: [AppComponent, EmpAddEditComponent, ProfileDetailComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -44,6 +46,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatPaginatorModule,
     MatSortModule,
     MatSnackBarModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent],

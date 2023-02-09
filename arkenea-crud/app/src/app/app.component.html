@@ -21,7 +21,7 @@
       <!-- ID Column -->
       <ng-container matColumnDef="id">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
-        <td mat-cell *matCellDef="let row"> {{row._id}} </td>
+        <td mat-cell *matCellDef="let row" (click)="openProfile(row._id)" style="color: blue; font-weight: bold; text-decoration: underline;"> {{row._id}} </td>
       </ng-container>
 
       <!-- Progress Column -->
